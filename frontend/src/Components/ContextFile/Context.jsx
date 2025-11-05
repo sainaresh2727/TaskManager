@@ -50,7 +50,7 @@ function Context({children}) {
   async function SignUpFn(e) {
     e.preventDefault()
     try{
-      let SignData=await Axios.post('http://localhost:8000/SignUpData',{SignUpUserName,SignUpPass,SignUpEmail,SignUpPhNo,SignUpGender,SignUpImage,SignUpAddress})
+      let SignData=await Axios.post('https://taskmanager-backend-eo90.onrender.com/SignUpData',{SignUpUserName,SignUpPass,SignUpEmail,SignUpPhNo,SignUpGender,SignUpImage,SignUpAddress})
       
       setSignModalMess(SignData.data.message)
       let ModalShow=new window.bootstrap.Modal(ModelRef.current)
@@ -79,7 +79,7 @@ function Context({children}) {
   async function LoginDatas(e) {
     e.preventDefault()
     try{
-      let LoginData=await Axios.post('http://localhost:8000/LoginData',{
+      let LoginData=await Axios.post('https://taskmanager-backend-eo90.onrender.com/LoginData',{
         LoginUserName,LoginPass
       })
     let LoginnModal=new window.bootstrap.Modal(LoginModal.current)
@@ -114,7 +114,7 @@ function Context({children}) {
   })
   useEffect(()=>{
     async function GettingProfileDetails() {
-      let ProfileDetails=await Axios.get(`http://localhost:8000/Profile/${UserId}`)
+      let ProfileDetails=await Axios.get(`https://taskmanager-backend-eo90.onrender.com/Profile/${UserId}`)
       setProfileDats(ProfileDetails.data.data)
     }
    if(UserId){
@@ -139,7 +139,7 @@ function Context({children}) {
    
     
     try{
-      let SendingTaks=await Axios.post(`http://localhost:8000/Tasks/`,{TaskName,TaskDetails,TaskDate,TaskPriority,TaskId:UserID})
+      let SendingTaks=await Axios.post(`https://taskmanager-backend-eo90.onrender.com/Tasks/`,{TaskName,TaskDetails,TaskDate,TaskPriority,TaskId:UserID})
       alert(SendingTaks.data.message)
       GettingTasks()
       setTaskName('')
@@ -153,7 +153,7 @@ function Context({children}) {
     }
   }
    async function GettingTasks() {
-      let GettingTasks=await Axios.get(`http://localhost:8000/GetTasks/${UserID}`)
+      let GettingTasks=await Axios.get(`https://taskmanager-backend-eo90.onrender.com/GetTasks/${UserID}`)
       setTasks(GettingTasks.data.data)
     }
    useEffect(()=>{
@@ -164,7 +164,7 @@ function Context({children}) {
   let ToastAlert=useRef()
   async function DeleteTask(id) {
     try{
-      let DeleteTask=await Axios.delete(`http://localhost:8000/DeleteTask/${id}`)
+      let DeleteTask=await Axios.delete(`https://taskmanager-backend-eo90.onrender.com/DeleteTask/${id}`)
     alert(DeleteTask.data.message)
     let Alert=new window.bootstrap.Toast(ToastAlert.current)
     Alert.show()
