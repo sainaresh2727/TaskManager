@@ -1,0 +1,152 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif
+}
+
+
+/* ================SIGNUP CSS STARTS=========== */
+#SignUpCF{
+  display: flex;
+  /* background-color: aqua; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#SignUpCard{
+  height: 78vh;
+  overflow-y: auto;
+}
+#SignUpForm{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#SignUpForm input{
+  border-radius: 25px;
+}
+#SignUpForm select{
+  border-radius: 25px;
+}
+#SignUpForm label{
+  font-weight: bold;
+}
+#SignPassWord input{
+  border-radius: 0px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+#SignPassWord span{
+  border-radius: 0px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+#DontHaveAccount{
+  text-decoration: none;
+  
+}
+#ProfileImage{
+  height: 80px;
+  width:  80px;
+  border-radius: 50%;
+  
+}
+#ProfileImage img{
+  height: 100%;
+}
+/* ================SIGNUP CSS ENDS=========== */
+/* =============LOGIN CSS STARTS=============== */
+#LoginCF{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+#LoginForm{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#LoginForm label{
+  font-weight: bold;
+}
+#LoginUsername input{
+  border-radius: 30px;
+}
+#LoginPassword input{
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+#LoginPassword span{
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+/* =============LOGIN CSS ENDS=============== */
+/* =============NAVBAR CSS STARTS============= */
+#NavbarContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#Brand h3,h5{
+  margin: auto 0px;
+}
+#DateTime{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+#DateTime p{
+  margin: auto 0px;
+}
+#LogoutBtn{
+  display: flex;
+  align-items: center;
+}
+#LogoutBtn button{
+  margin: auto 0px;
+}
+#UserAccount {
+  height: 35px;
+  width:  35px;
+  border: solid 1px black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#UserAccount i{
+  font-size: 18px;
+}
+#ProfilePicInside{
+  height: 78px;
+  width: 78px;
+  border-radius: 50%;
+ 
+}
+#ProfilePicInside img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* =============NAVBAR CSS ENDS============= */
+/* ============ PAGE CSS STARTS=============== */
+#TaskContainer{
+  display: flex;
+  
+  justify-content: center;
+}
+#TaskForm{
+
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  
+}
+#TaskForm input,select,textarea{
+  border-radius: 20px !important;
+  margin: auto 0px;
+}
+/* ============ PAGE CSS ENDS=============== */
